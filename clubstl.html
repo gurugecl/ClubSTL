@@ -1,2 +1,727 @@
-# ClubSTL
-Website I built for a friend's business based on a bootstrap course I took 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Club Stl</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+ 
+  <style>
+
+  body {
+    font: 400 15px/1.8 Lato, sans-serif;
+    color: #777;
+}
+
+.navbar {
+    font-family: Montserrat, sans-serif;
+}
+
+
+h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #303030;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+ h3 {
+      margin: 10px 0 30px 0;
+      letter-spacing: 10px;      
+      font-size: 20px;
+      color: #111;
+  }
+
+/* Remove rounded borders on input fields */
+.form-control {
+    border-radius: 0;
+}
+
+/* Disable the ability to resize textareas */
+textarea {
+    resize: none;
+}
+
+  #containerII {
+  	padding: 80px 200px;
+  }
+
+  .container {
+  	padding: 80px 120px;
+  }
+
+  .person {
+  	border: 10px solid transparent;
+  	margin-bottom: 25px;
+  	width: 225px;
+  	height: 180px;
+  	opacity: 0.7;
+  }
+
+  .person:hover {
+  	border-color: black;
+  }
+
+  .carousel-inner img {
+  	-webkit-filter: grayscale(90%);
+  	filter: grayscale(90%); /*make all photos black and white */
+  	width: 100%; /* Set width to 100% */
+  	margin: auto;
+  }
+  .carousel-caption h3 {
+  	color: #fff !important;
+  }
+  @media (max-width: 600px) {
+  	.carousel-caption {
+  		display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+  	}
+  }
+
+  .jumbotron {
+  	background-color: black;
+  	color: #ffffff;
+  	margin-bottom: 0px;
+  }
+
+  #googleMap {
+  	width:100%; /* Span the entire width of the screen */
+  	height: 400px; /* Set the height to 400 pixels */
+  	-webkit-filter: grayscale(100%);
+  	filter: grayscale(100%); /* Change the color of the map to black and white */
+  }
+
+  .carousel-control.right, .carousel-control.left{
+  	background-image:none;
+  	color: #cecece;
+  }
+
+
+  .carousel-indicators li {
+  	border-color: black;
+  }
+
+  .carousel-indicators li.active {
+  	background-color: black;
+  }
+
+  .item h4 {
+  	font-size: 19px;
+  	line-height: 1.375em;
+  	font-weight: 400;
+  	font-style: italic;
+  	margin: 70px 0;
+  }
+.item span {
+	font-style: normal;
+}
+
+.bg-1 {
+    background: #2d2d30;
+    color: #bdbdbd;
+}
+
+.bg-1 h3 {color: #fff;}
+.bg-1 p {font-style: italic;}
+
+/* Remove rounded borders from list */
+.list-group-item:first-child {
+	border-top-right-radius: 0;
+	border-top-left-radius: 0;
+}
+
+.list-group-item:last-child {
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+/* Remove rounded borders from list */
+.list-group-item:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+/* Remove border and add padding to thumbnails */
+.thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+
+}
+
+.thumbnail p {
+    margin-top: 15px;
+    color: #555;
+}
+
+/* Black buttons with extra padding and without rounded borders */
+.btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #f1f1f1;
+    border-radius: 0;
+    transition: .2s;
+}
+
+/* On hover, the color of .btn will transition to white with black text */
+.btn:hover, .btn:focus {
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #000;
+}
+
+/* Add an orange color to all icons and set the font-size */
+ .logo-small {
+      color: #f4511e;
+      font-size: 50px;
+  }
+  .logo {
+      color: #f4511e;
+      font-size: 200px;
+  }
+
+  /* Add a dark background color with a little bit see-through */ 
+.navbar {
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity:0.9;
+}
+
+/* Add a gray color to all navbar links */
+.navbar li a, .navbar .navbar-brand { 
+    color: #d5d5d5 !important;
+}
+
+/* On hover, the links will turn white */
+.navbar-nav li a:hover {
+    color: #fff !important;
+}
+
+/* The active link */
+.navbar-nav li.active a {
+    color: #fff !important;
+    background-color:#29292c !important;
+}
+
+/* Remove border color from the collapsible button */
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+}
+
+/* Dropdown */
+.open .dropdown-toggle {
+    color: #fff ;
+    background-color: #555 !important;
+}
+
+/* Dropdown links */
+.dropdown-menu li a {
+    color: #000 !important;
+}
+
+/* On hover, the dropdown links will turn red */
+.dropdown-menu li a:hover {
+    background-color: red !important;
+}
+
+/* Add a dark gray background color to the modal header and center text */
+.modal-header, .modal-header h4, .close {
+    background-color: #333;
+    color: #fff !important;
+    text-align: center;
+    font-size: 30px;
+}
+
+.modal-header, .modal-body {
+    padding: 40px 50px;
+ }
+
+.slideanim {visibility:hidden;}
+.slide {
+    /* The name of the animation */
+    animation-name: slide;
+    -webkit-animation-name: slide; 
+    /* The duration of the animation */
+    animation-duration: 1s; 
+    -webkit-animation-duration: 1s;
+    /* Make the element visible */
+    visibility: visible; 
+}
+
+/* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+@keyframes slide {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    } 
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    } 
+}
+@-webkit-keyframes slide {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    } 
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+}
+
+#hookups {
+	margin-bottom: 150px;
+	margin-top: 100px;
+}
+
+
+.thumbnail img {
+	height: 220px;
+}
+
+#myCarousel img {
+	height: 650px;
+}
+
+.locationsII {
+	margin-top: 100px;
+}
+
+#club {
+	margin-right: 50px;
+	margin-left: 50px;
+}
+
+
+  </style>
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">CLUBSTL</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#myPage">HOME</a></li>
+        <li><a href="#party">PARTY</a></li>
+        <li><a href="#hookups">HOOKUPS</a></li>
+        <li><a href="#events">EVENTS</a></li>
+        <li><a href="#signup">SIGNUP</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Conctact</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Merchandise</a></li> 
+          </ul>
+        </li>
+        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+     <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="C:\Users\Chandika Guruge\Documents\MyDocs\WebsitePics\downtown.jpg" alt="Downtown" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>DOWNTOWN</h3>
+          <p>WHEELHOUSE, BPW, THE LANDING</p>
+        </div>      
+      </div>
+
+      <div class="item">
+        <img src="C:\Users\Chandika Guruge\Documents\MyDocs\WebsitePics\midtown.jpg" alt="Midtown" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>MIDTOWN</h3>
+          <p>OLIVE BAR, PEPPER LOUNGE, BAR NAPOLI</p>
+        </div>      
+      </div>
+
+       <div class="item">
+        <img src="C:\Users\Chandika Guruge\Documents\MyDocs\WebsitePics\cwe.jpg" alt="Central West End" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>CENTRAL WEST END</h3>
+          <p>MANDARIN, BAR ITALIA, SUB ZERO</p>
+        </div>      
+      </div>
+    </div>
+
+	  <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+
+
+
+
+<div id="party" class="text-center">
+<div id="containerII">
+  <h3>CLUB STL</h3>
+  <p><em>We Get the Party Started!</em></p>
+  <p>Hit Us Up for the Hottest Events in the Lou..Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <br>
+ </div>
+
+
+<h2>Where The Partys At</h2>
+<div class="locationsII">
+  <div class="row slideanim">
+  	<div class="col-sm-4">
+  		<p class="text-center"><strong>Mandarin</strong></p><br>
+  		<a href="#demo" data-toggle="collapse">
+  		<img src="C:\Users\Chandika Guruge\Documents\MyDocs\WebsitePics\mandarin.jpg" class="img-circle person" alt="Mandarin Lounge" width="255" height="255">
+  		</a>
+  		<div id="demo" class="collapse">
+  			<p>Central West End</p>
+  			<p>Open Until 1 am</p>
+  			<p>$5 Cover</p>
+  		</div>
+  	</div>
+  	<div class="col-sm-4">
+  		<p class="text-center"><strong>Wheelhouse</strong></p><br>
+  		<a href="#demo2" data-toggle="collapse">
+  		<img src="C:\Users\Chandika Guruge\Documents\MyDocs\WebsitePics\wheelhouse.jpg" class="img-circle person" alt="Wheelhouse Downtonw" width="255" height="255">
+  		</a>
+  		<div id="demo2" class="collapse">
+  			<p>Downtown</p>
+  			<p>Open Until 3 am</p>
+  			<p>$5 Cover</p>
+  		</div>
+  	</div>
+  	<div class="col-sm-4">
+  		<p class="text-center"><strong>Pepper Lounge</strong></p><br>
+  		<a href="#demo3" data-toggle="collapse">
+  		<img src="C:\Users\Chandika Guruge\Documents\MyDocs\WebsitePics\pepper.jpg" class="img-circle person" alt="Pepper Lounge" width="255" height="255">
+  		</a>
+  		<div id="demo3" class="collapse">
+  			<p>Midtown</p>
+  			<p>Open Until 3am</p>
+  			<p>$10 Cover</p>
+  		</div>
+  	</div>
+  	</div>
+</div>
+
+<div class="row slideanim">
+  	<div class="col-sm-4">
+  		<a href="#demo4" data-toggle="collapse">
+  		<img src="C:\Users\Chandika Guruge\Documents\MyDocs\WebsitePics\Obar.jpg" class="img-circle person" alt="O Bar" width="255" height="255">
+  		</a>
+  		<p class="text-center"><strong>O Bar</strong></p><br>
+  		<div id="demo4" class="collapse">
+  			<p>Midtown</p>
+  			<p>Open Until 3 am</p>
+  			<p>$10 Cover</p>
+  		</div>
+  	</div>
+  	<div class="col-sm-4">
+  		<a href="#demo5" data-toggle="collapse">
+  		<img src="C:\Users\Chandika Guruge\Documents\MyDocs\WebsitePics\BarItalia.jpg" class="img-circle person" alt="Wheelhouse Downtonw" width="255" height="255">
+  		</a>
+  		<p class="text-center"><strong>Bar Italia</strong></p><br>
+  		<div id="demo5" class="collapse">
+  			<p>Central West End</p>
+  			<p>Open Until 1 am</p>
+  			<p>$5 Cover</p>
+  		</div>
+  	</div>
+  	<div class="col-sm-4">
+  		<a href="#demo6" data-toggle="collapse">
+  		<img src="C:\Users\Chandika Guruge\Documents\MyDocs\WebsitePics\BarNapoli.jpg" class="img-circle person" alt="Pepper Lounge" width="255" height="255">
+  		</a>
+  		<p class="text-center"><strong>Bar Napoli</strong></p><br>
+  		<div id="demo6" class="collapse">
+  			<p>Midtown</p>
+  			<p>Open Until 1am</p>
+  			<p>No Cover</p>
+  		</div>
+  		</div>
+  	</div>
+  	</div>
+</div>
+
+
+<div class="container-fluid text-center bg-grey">
+  <div class="row text-center">
+    <div id="myCarouselI" class="carousel slide text-center" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarouselI" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarouselI" data-slide-to="1"></li>
+      <li data-target="#myCarouselI" data-slide-to="2"></li>
+    </ol>
+
+	<!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+	    <h4>"Mandarin is always poppin! Drinks are cheap and Haleys ass always looks good"<br>
+	<span style="font-style:normal;">Anthony Marquis, Mandarin Addict</span></h4>
+	</div>
+	<div class="item">
+		<h4>"Just blew a grand at Penthouse and it was well worth it!!"<br><span style="font-style:normal;">Kanishka Desai, Strip Club Addict</span></h4>
+	</div>
+	<div class="item">
+		<h4>"Bro....I stayed out past 11 pm last night..thats how awesome O Bar was!"<br><span style="font-style:normal;">Sam, Gym Addict</span></h4>
+		</div>
+	</div>
+
+      <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarouselI" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarouselI" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+</div>
+</div>
+
+<div id="hookups" class="container-fluid text-center">
+<h2>What's Poppin</h2>
+<h4>The Best Hookups in the Lou</h4>
+<br>
+<div class="row slideanim">
+<div class="col-sm-4">
+	<span class="glyphicon glyphicon-glass logo-small"></span>
+	<h4>DRINK SPECIALS</h4>
+	<p>The best places to get your drink on...</p>
+</div>
+<div class="col-sm-4">
+	<span class="glyphicon glyphicon-music logo-small"></span>
+	<h4>MUSIC</h4>
+	<p>The best music...</p>
+</div>
+<div class="col-sm-4">
+	<span class="glyphicon glyphicon-eye-open logo-small"></span>
+	<h4>EYE CANDY</h4>
+	<p>Where the hottest singles are...</p>
+</div>
+</div>
+<br><br>
+<div class="row slideanim">
+	<div class="col-sm-4">
+	<span class="glyphicon glyphicon-cutlery logo-small"></span>
+	<h4>FOOD</h4>
+	<p>Where to get your grub on when the craving hits....</p>
+</div>
+	<div class="col-sm-4">
+	<span class="glyphicon glyphicon-heart logo-small"></span>
+	<h4>ROMANCE</h4>
+	<p>Where to take your significant other for a romantic night...</p>
+</div>
+	<div class="col-sm-4">
+	<span class="glyphicon glyphicon-fire logo-small"></span>
+	<h4>WHAT'S HOT</h4>
+	<p>The nightspots that are poppin right now....</p>
+</div>
+</div>
+</div>
+
+
+
+
+
+<!-- Container (TOUR Section) -->
+<div class="bg-1">
+	<div id="events" class="container">
+    <h3 class="text-center">STL EVENTS</h3>
+    <p class="text-center">Get passes to the hottest parties in Stl<br>AMERISTAR SUMMER POOL PARTY SERIES! June 5-August 23</p>
+    <ul class="list-group">
+      <li class="list-group-item">June <span class="label label-danger">Sold Out!</span></li>
+      <li class="list-group-item">July <span class="label label-danger">Sold Out!</span></li> 
+      <li class="list-group-item">August <span class="badge">45</span></li> 
+    </ul>
+    
+    <div class="row text-center slideanim">
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="C:\Users\Chandika Guruge\Documents\MyDocs\WebsitePics\steve.jpg" alt="Steve Aoki" width="400" height="300">
+          <p><strong>Steve Aoki</strong></p>
+          <p>Fri. August 3 2016</p>
+          <button class="btn" data-toggle="modal" data-target="#myModal">Buy Tickets</button>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="C:\Users\Chandika Guruge\Documents\MyDocs\WebsitePics\loufest.jpg" alt="Loufest" width="400" height="300">
+          <p><strong>Loufest</strong></p>
+          <p>Sat. November 28 2016</p>
+          <button class="btn" data-toggle="modal" data-target="#myModal">Buy Tickets</button>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="C:\Users\Chandika Guruge\Documents\MyDocs\WebsitePics\rehydrate.jpg" alt="Rehydrate Party" width="400" height="300">
+          <p><strong>Rehydrate Pool Party</strong></p>
+          <p>Sun. June 29 2016</p>
+          <button class="btn" data-toggle="modal" data-target="#myModal">Buy Tickets</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+	<div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4><span class="glyphicon glyphicon-lock"></span> Tickets</h4>
+      </div>
+      <div class="modal-body">
+        <form role="form">
+          <div class="form-group">
+            <label for="psw"><span class="glyphicon glyphicon-shopping-cart"></span> Tickets: $25/Person</label>
+            <input type="number" class="form-control" id="psw" placeholder="How many?">
+          </div>
+          <div class="form-group">
+            <label for="usrname"><span class="glyphicon glyphicon-user"></span> Send To</label>
+            <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+          </div>
+          <button type="submit" class="btn btn-block">Pay 
+            <span class="glyphicon glyphicon-ok"></span>
+          </button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+          <span class="glyphicon glyphicon-remove"></span> Cancel
+        </button>
+        <p>Need <a href="#">help?</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="googleMap"></div>
+
+<!-- Add Google Maps -->
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script>
+var myCenter = new google.maps.LatLng(38.6272, -90.1978);
+
+function initialize() {
+var mapProp = {
+center:myCenter,
+zoom:12,
+scrollwheel:false,
+draggable:false,
+mapTypeId:google.maps.MapTypeId.ROADMAP
+};
+
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var marker = new google.maps.Marker({
+position:myCenter,
+});
+
+marker.setMap(map);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+<div id="signup" class="jumbotron text-center slideanim">
+	<h1>ClubSTL</h1>
+	<p>We'll Bring the Party to You</p>
+	<p>Sign up with us to be notified of all the hottest events int the STL</p>
+	<form class="form-inline">
+		<input type="email" class="form-control" size="50" placeholder="Email Address">
+		<button type="button" class="btn btn-danger">Subscribe</button>
+		</form>
+	</div>
+</div>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a").on('click', function(event) {
+
+  // Prevent default anchor click behavior
+  event.preventDefault();
+
+  // Store hash
+  var hash = this.hash;
+
+
+  // Using jQuery's animate() method to add smooth page scroll
+  // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+  $('html, body').animate({
+    scrollTop: $(hash).offset().top
+  }, 900, function(){
+
+    // Add hash (#) to URL when done scrolling (default click behavior)
+    window.location.hash = hash;
+    });
+  });
+
+ $(window).scroll(function() {
+  $(".slideanim").each(function(){
+    var pos = $(this).offset().top;
+
+    var winTop = $(window).scrollTop();
+    if (pos < winTop + 600) {
+      $(this).addClass("slide");
+    }
+  });
+});
+})
+
+</script>
+
+
+</body>
+</html>
