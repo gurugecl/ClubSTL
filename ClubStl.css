@@ -43,13 +43,27 @@ textarea {
     resize: none;
 }
 
+@media (max-width: 480px){
+  .item {
+    height: 450px;
+  }
+}
+
+@media (min-width: 1199px){
   #containerII {
   	padding: 80px 200px;
-  }
+  }}
 
+@media (min-width: 480px) {
   .container {
   	padding: 80px 120px;
-  }
+  }}
+
+@media (max-width: 480px) {
+  .container {
+    position: relative;
+    margin-top: 40px;
+  }}
 
   .person {
   	border: 10px solid transparent;
@@ -103,7 +117,7 @@ textarea {
   }
 
   .carousel-indicators li.active {
-  	background-color: black;
+  	background-color: white;
   }
 
   .item h4 {
@@ -209,7 +223,7 @@ textarea {
 /* The active link */
 .navbar-nav li.active a {
     color: #fff !important;
-    background-color:#29292c !important;
+    background-color: #a3a375 !important;
 }
 
 /* Remove border color from the collapsible button */
@@ -302,5 +316,23 @@ textarea {
 	margin-left: 50px;
 }
 
+@media (min-width: 1199px){
+.img-circle {
+  position: relative;
+  right: -25px;
+  height: 175px;
+  width: 220px;
+}}
 
-  
+@media (max-width: 767px){
+.img-circle {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+}}
+
+@media (max-width: 480px){
+.img-circle {
+  height: 175px;
+  width: 220px;
+  }}
